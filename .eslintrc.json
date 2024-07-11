@@ -1,0 +1,77 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "prefer-const": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      },
+      {
+        "usePrettierrc": true
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/consistent-type-imports": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-invalid-void-type": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/consistent-type-assertions": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        ".js",
+        ".jsx"
+      ],
+      "rules": {
+        // Disable the "no-unused-vars" rule for interfaces
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "varsIgnorePattern": "^_",
+            "argsIgnorePattern": "^_"
+          }
+        ],
+        "import/extensions": "off",
+        "import/no-unresolved": "off",
+        "import/no-anonymous-default-export": "off",
+        "no-unused-vars": "warn",
+        "no-unused-expressions": "off",
+        "no-use-before-define": "warn",
+        "no-param-reassign": "off",
+        "no-shadow": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "camelcase": "off",
+        "no-undef": "warn",
+        "no-unsafe-optional-chaining": "warn",
+        "consistent-return": "warn",
+        "import/order": "off",
+        "no-unneeded-ternary": "off",
+        "jsx-a11y/label-has-associated-control": "off"
+      }
+    }
+  ]
+}
