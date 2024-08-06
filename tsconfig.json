@@ -9,6 +9,7 @@
       "dom",
       "esnext"
     ],
+    "baseUrl": "",
     "module": "commonjs",
     "outDir": "./build",
     "strict": false,
@@ -21,18 +22,11 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipLibCheck": true,
-    "noEmit": true,
-    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "",
     "paths": {
       "@/*": [
         "./src/*"
       ]
     }
-  },
-  "include": [
-    "./src",
-  ],
+  }
 }
